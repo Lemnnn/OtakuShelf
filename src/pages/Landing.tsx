@@ -1,11 +1,15 @@
+import { useNavigate } from "react-router-dom";
+
 const Landing = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="w-screen h-screen flex flex-col relative">
       <div className="w-full bg-black flex justify-between items-center px-10 py-5">
         <p className="text-white font-extrabold text-4xl">Otaku Shelf</p>
         <button
           className="bg-white py-2 px-7 rounded-xl font-bold"
-          onClick={() => (window.location.href = "/register")}
+          onClick={() => navigate("/register")}
         >
           Get Started!
         </button>
